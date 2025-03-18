@@ -8,3 +8,8 @@
 @import url('./reset.css');
 @import url('./base.css');
 
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
