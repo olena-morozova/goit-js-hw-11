@@ -3,7 +3,7 @@ import "simplelightbox/dist/simple-lightbox.min.css";
 
 const gallery = document.querySelector(".gallery");  
 const lightbox = new SimpleLightbox(".gallery a", {  
-    captionsData: "alt",  
+      
     captionDelay: 250,  
 });  
 
@@ -26,7 +26,11 @@ export function renderImages(hits) {
         })  
         .join("");  
 
-    gallery.innerHTML = ""; // Очищуємо попередній результат  
+    gallery.innerHTML = "";  
     gallery.insertAdjacentHTML("beforeend", markup);  
-    lightbox.refresh(); // Оновлення галереї  
+    lightbox.refresh();   
+}
+
+export function clearGallery() {  
+    gallery.innerHTML = "";  
 }
